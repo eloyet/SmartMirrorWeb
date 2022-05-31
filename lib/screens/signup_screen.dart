@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:smart_mirror/reusable_widgets/reusable_widget.dart';
+import 'package:smart_mirror/screens/customize_screen.dart';
 import 'package:smart_mirror/screens/signin_screen.dart';
 import 'package:smart_mirror/screens/upload_photo.dart';
 import 'package:smart_mirror/service/storage_service.dart';

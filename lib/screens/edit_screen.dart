@@ -504,9 +504,9 @@ class _EditScreenState extends State<EditScreen> {
                         final path = results.files.single.path!;
                         final fileName = results.files.single.name;
 
-                        storage
-                            .uploadFile(path, fileName)
-                            .then((value) => print('Done'));
+                       // storage
+                       //     .uploadFile(path, fileName)
+                        //    .then((value) => print('Done'));
                       },
                       //child: const Text('Upload Photo'),
                     ),

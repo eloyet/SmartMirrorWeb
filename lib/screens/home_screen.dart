@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SingleChildScrollView(
               child: Padding(
-                  padding: EdgeInsets.all(MediaQuery.of(context).size.width /13), //MediaQuery provides widget to rebuild automatically
+                  padding: EdgeInsets.all(MediaQuery.of(context).size.width /25), //MediaQuery provides widget to rebuild automatically
                   child: Column(
                     children: <Widget>[
                       Align(

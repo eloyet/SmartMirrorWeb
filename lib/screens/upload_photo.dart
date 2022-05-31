@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'dart:typed_data';
-
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:smart_mirror/reusable_widgets/reusable_widget.dart';
@@ -10,6 +9,7 @@ import 'package:smart_mirror/screens/signin_screen.dart';
 import 'package:smart_mirror/utils/my_clipper.dart';
 
 import '../service/storage_service.dart';
+
 // the following is the code for the upload photo of the user
 class UploadPhotoScreen extends StatefulWidget {
   const UploadPhotoScreen({Key? key}) : super(key: key);
@@ -65,7 +65,6 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
               padding: EdgeInsets.all(MediaQuery.of(context).size.width / 20),
               child: Column(
                 children: <Widget>[
-               
                   InkWell(
                     child: const Text(
                       "Please upload a photo of yourself \n     that clearly shows your face.",
@@ -78,7 +77,6 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                   const SizedBox(
                     height: 40,
                   ),
-                   
                   ElevatedButton.icon(
                     //for upload photo button
                     label: const Text('Upload Photo'),
@@ -114,7 +112,7 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                       final path = picked.files.single.path!;
                       final fileName = picked.files.single.name;
 
-                      storage.uploadFile(path, fileName).then(
+                      storage.uploadFile(path,fileName).then(
                             (value) => uploadValue = true,
                           ); //for upload photo to firebase storage
                     },
@@ -141,17 +139,15 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                             builder: (context) => const CustomizeScreen(),
                           ),
                         );
-                      } 
-                      //else if(uploadValue == false) {
-//
-  //                      ScaffoldMessenger.of(context).showSnackBar(
-    //                      const SnackBar(
-      //                      content: Text(
-        //                        'Please upload a photo of yourself that clearly shows your face.'),
-          //                ),
-                      //  );
-                //        return;
-                //      }
+                      } else if (uploadValue == false) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                                'Please upload a photo of yourself that clearly shows your face.'),
+                          ),
+                        );
+                        return;
+                      }
                     },
                   ),
                 ],

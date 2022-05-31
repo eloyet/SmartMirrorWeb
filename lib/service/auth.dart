@@ -75,9 +75,9 @@ class AuthService { //class for the connection with the firebase and the storage
       String wreminder,
       String wwelcome,
       String wfood,
-      String reminder1,
-      String reminder2,
-      String reminder3
+      String _reminderTextController1,
+      String _reminderTextController2,
+      String _reminderTextController3
 ) async {
     var collection = FirebaseFirestore.instance.collection('Person');
     collection
@@ -94,9 +94,9 @@ class AuthService { //class for the connection with the firebase and the storage
               'reminder_widget': wreminder,
               'welcome_widget': wwelcome,
               'food_widget': wfood,
-              'reminder1': '',
-              'reminder2': '',
-              'reminder3': '',
+          'reminder1': _reminderTextController1,
+          'reminder2': _reminderTextController2,
+          'reminder3': _reminderTextController3,
             
           
         }) // <-- customize mirror data

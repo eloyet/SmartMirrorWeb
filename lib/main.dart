@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_mirror/screens/customize_screen.dart';
+import 'package:smart_mirror/screens/dene.dart';
 import 'package:smart_mirror/screens/home_screen.dart';
 import 'package:smart_mirror/screens/reminder.dart';
 import 'package:smart_mirror/screens/signin_screen.dart';
