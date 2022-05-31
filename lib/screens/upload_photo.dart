@@ -100,7 +100,7 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                         allowedExtensions: ['png', 'jpg', 'jpeg'],
                       );
                       if (picked == null) {
-                        uploadValue = false;
+                        
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text('No file selected.'),
@@ -132,23 +132,16 @@ class _UploadPhotoScreenState extends State<UploadPhotoScreen> {
                       borderRadius: new BorderRadius.circular(90),
                     ),
                     onPressed: () {
-                      if (uploadValue == true) {
+                    
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const CustomizeScreen(),
                           ),
                         );
-                      } else if (uploadValue == false) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                                'Please upload a photo of yourself that clearly shows your face.'),
-                          ),
-                        );
-                        return;
-                      }
-                    },
+                      
+                      },
+                    
                   ),
                 ],
               ),
